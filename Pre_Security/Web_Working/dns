@@ -1,0 +1,10 @@
+GET CNAME OF SUBDOMAIN : nslookup --type=CNAME SubDomain.Website.TLD
+    
+    TLD : top level domain
+
+
+GET TXT VALUE : nslookup --type=TXT Website.TLD
+
+GET NUMERICAL PRIORITY VALUE : nslookup --type=MX Website.TLD
+
+GET A RECORD IP : nslookup --type=A Website.TLD
