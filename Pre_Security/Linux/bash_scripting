@@ -1,0 +1,3 @@
+DEBUG SCRIPT : bash -x ./ScriptName
+
+REMOVE ELEMENT AT I INDEX IN ARRAY : unset Arrayname[i]
