@@ -1,0 +1,3 @@
+TURN INTO WEB SERVER : python3 -m http.sever
+
+DOWNLOAD FROM ABOVE SERVER : wget http://IP:Port/File_Path
