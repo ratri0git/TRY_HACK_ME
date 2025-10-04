@@ -12,8 +12,10 @@ Certificates will be listed here once I complete learning paths:
 
 ## 📝 Write-Ups
 This section will contain links to write-ups for TryHackMe rooms and challenges I complete. Each write-up will include questions and solutions:
+
+# walkthrough Regular Expressions
 ```bash
-https://github.com/ratri0git/TRY_HACK_ME/Pre_Security/Linux/Learn_Regular_Expression.md
+https://github.com/ratri0git/TRY_HACK_ME/blob/main/Pre_Security/Linux/Learn_Regular_Expression.md
 ```
 
 ### Completed Rooms
