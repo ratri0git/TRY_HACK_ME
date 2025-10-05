@@ -11,7 +11,10 @@ Check out my TryHackMe badges below!
 Certificates will be listed here once I complete learning paths:
 
 ## 📝 Write-Ups
-This section will contain detailed write-ups for TryHackMe rooms and challenges I complete. Each write-up will include:
+This section will contain links to write-ups for TryHackMe rooms and challenges I complete. Each write-up will include questions and solutions:
+
+# walkthrough Regular Expressions
+- [Click Here](https://github.com/ratri0git/TRY_HACK_ME/blob/main/Pre_Security/Linux/Learn_Regular_Expression.md) - Walkthrough/Regular_Expressions room (Tasks 2-5).
 
 ### Completed Rooms
 *(None yet—first write-up coming soon!)*
