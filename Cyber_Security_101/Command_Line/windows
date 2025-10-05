@@ -1,0 +1,35 @@
+COMMAND LINE INTERPRETER : cmd.exe
+
+CHECK PATH : set
+
+CHECK VERSION : ver
+
+CHECK DETAILED INFO : systeminfo
+
+VIEW PAGE BY PAGE : Command | more
+
+CLEAR : cls
+
+
+SHOW IP MAC SUBNET GATEWAY : ipconfig 
+
+SHOW DHCP AND DNS TOO : ipconfig \all
+
+CHECK CONNECTION : ping IP_WebLink
+
+TRACE NETWORK ROUTE : tracert IP_WebLink
+
+RETURN IP BY DEFAULT SERVER : nslookup WebLink
+
+RETURN IP BY SOECIFIC SERVER : nslookup WebLink ServerIP
+
+NETSTAT : 
+
+    nestat -a : displays all established connections and listening ports
+    nestat -b : shows the program associated with each listening port and established connection
+    nestat -o : reveals the process ID (PID) associated with the connection
+    nestat -n : uses a numerical form for addresses and port numbers
+
+GET SPECIFIC PORT CONNECTION : netstat -aon | findstr :PORT
+
+GET SERVICE WITH PID : tasklist /svc /FI "PID eq PID_FROM_ABOVE_COMMAND"
