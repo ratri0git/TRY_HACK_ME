@@ -1,0 +1,5 @@
+RESET USER PASS AS ADMIN : Set-ADAccountPassword sophie -Reset -NewPassword (Read-Host -AsSecureString -Prompt 'New Password') -Verbose
+
+FORCE CHANGE PASS ON FIRST LOGIN : Set-ADUser -ChangePasswordAtLogon $true -Identity sophie -Verbose
+
+FORCE SYNC GPO : gpupdate /force
