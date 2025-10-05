@@ -1,3 +1,10 @@
 DEBUG SCRIPT : bash -x ./ScriptName
 
 REMOVE ELEMENT AT I INDEX IN ARRAY : unset Arrayname[i]
+
+CHECK IF FILE IS WRITABLE : 
+
+    if [[ -w $Filename]]
+    then
+        echo "yes"
+    fi
