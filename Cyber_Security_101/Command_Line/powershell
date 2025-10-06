@@ -19,3 +19,42 @@ EXAMPLE USAGE FOR CMDLET New-LocalUser : Get-Help New-LocalUser -examples
 
 LIST FILE AND FOLDERS IN DIRECTORY : get-childitem \Path\
 
+CREATE NEW FILE : new-item -path \path\ -itemtype "File"
+
+CREATE NEW FOLDER : new-item -path \path\ -itemtype "Directory"
+
+DELETE FILE OR FOLDER : remove-item -path \path\
+
+COPYING OR MOVE ITEM : copy-item -path \Source_path\ -destination \-destination_path\
+
+
+SORTING CONTENT BY LENGTH : get-childitem -path \Path\ | sort-object length
+
+FILES ENDING WITH EXTENSION txt : Get-ChildItem | Where-Object -Property "Extension" -eq ".txt"
+
+LIST NEEDFUL FILEDS : Get-ChildItem | Select-Object Name,Length 
+
+SORTING AND FILTER LARGEST FILE : Get-ChildItem | Sort-Object Length -Descending | Select-Object -First 1
+
+SEARCH KEYWORD : Select-String -Path \path\ -Pattern "keyword" 
+
+
+GET COMPUTERS DETAILS : get-computerinfo
+
+LIST LOCAL USER ACCOUNTS : get-localuser
+
+NETWORK INTERFACE DETAILS : Get-NetIPConfiguration
+
+DETAILS OF IPs : Get-NetIPAddress
+
+
+DETAILED LIST OF RUNNING PROCESSES : Get-Process
+
+GET STATUS OF ALL SERVICES : get-service
+
+DETAILS OF ACTIVE CONNECTIONS : Get-NetTCPConnection
+
+GENERATE FILE HASH : get-filehash -path \path\Filename
+
+RUN COMMANDS ON LOCAL AND REMOTE COMPUTERS : get-help invoke-command -examples 
+
