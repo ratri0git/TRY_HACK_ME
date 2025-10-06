@@ -1,0 +1,21 @@
+LAUNCH POWERSHELL : powershell
+
+DISPLAY FILE CONTENTS : get-content Filename
+
+CHANGE DIRECTORY : set-location -path \Path\
+
+LIST CMD LET, FUNCTIONS, SCRIPTS, ALIASES : get-command
+
+LIST SPECIFIC COMMAND : get-command command-type "cmdlet" 
+
+DETAILS ABOUT A CMDLET LIKE DATE : get-help get-date
+
+COMMANDAS START WITH VERB REMOVE : Get-Command -Name Remove*
+
+SEARCH ECHO ALIAS : Write-Output
+
+EXAMPLE USAGE FOR CMDLET New-LocalUser : Get-Help New-LocalUser -examples
+
+
+LIST FILE AND FOLDERS IN DIRECTORY : get-childitem \Path\
+
