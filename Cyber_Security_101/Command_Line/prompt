@@ -1,0 +1,72 @@
+COMMAND LINE INTERPRETER : cmd.exe
+
+CHECK PATH : set
+
+CHECK VERSION : ver
+
+CHECK DETAILED INFO : systeminfo
+
+VIEW PAGE BY PAGE : Command | more
+
+CLEAR : cls
+
+COMMAND HELP : commandName /?
+
+
+SHOW IP MAC SUBNET GATEWAY : ipconfig 
+
+SHOW DHCP AND DNS TOO : ipconfig \all
+
+CHECK CONNECTION : ping IP_WebLink
+
+TRACE NETWORK ROUTE : tracert IP_WebLink
+
+RETURN IP BY DEFAULT SERVER : nslookup WebLink
+
+RETURN IP BY SOECIFIC SERVER : nslookup WebLink ServerIP
+
+NETSTAT : 
+
+    nestat -a : displays all established connections and listening ports
+    nestat -b : shows the program associated with each listening port and established connection
+    nestat -o : reveals the process ID (PID) associated with the connection
+    nestat -n : uses a numerical form for addresses and port numbers
+
+GET SPECIFIC PORT CONNECTION : netstat -aon | findstr :PORT
+
+GET SERVICE WITH PID : tasklist /svc /FI "PID eq PID_FROM_ABOVE_COMMAND"
+
+
+CHANGE DIRECTORY : cd \Path\
+
+LIST CONTENTS : dir \Path\
+
+CREATE FOLDER : mkdir FolderName
+
+DELETE FOLDER : rmdir FolderName
+
+READ FILE : type Filename
+
+COPY FILES OR FOLDER : copy \Path_Source\ \Path_Destination\
+
+MOVE FILES OR FOLDER : move \Path_Source\ \Path_Destination\
+
+DELETE FILES : del OR erase Filename
+
+
+LIST RUNNING PROCESSES: tasklist
+
+APPLY FILTER : tasklist /FI "imagename eq  ProcessName"
+
+TERMINATE PROCESS : taskkill /PID PID_PROCESS
+
+
+chkdsk: checks the file system and disk volumes for errors and bad sectors.
+driverquery: displays a list of installed device drivers.
+sfc /scannow: scans system files for corruption and repairs them if possible.
+
+SHUTDOWN SYSTEM : shutdown /s
+
+ABORT SCHEDULED SHUTDOWN : shutdown /a
+
+RESTART : shutdown /r
