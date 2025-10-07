@@ -1,0 +1,34 @@
+SIMPLE MAIL TRANSFER PROTOCOL
+
+CONNECT : telnet IP 25
+
+    HELO or EHLO:  initiates an SMTP session
+    MAIL FROM:     specifies the sender’s email address
+    RCPT TO:       specifies the recipient’s email address
+    DATA:          indicates that the client will begin sending the content of the email message
+    .:             sent on a line by itself to indicate the end of the email message
+
+
+POST OFFICE PROTOCOL 
+
+CONNECT : telnet IP 110
+
+    USER <username> :           identifies the user
+    PASS <password> :           provides the users password
+    STAT :                      requests the number of messages and total size
+    LIST :                      lists all messages and their sizes
+    RETR <message_number> :     retrieves the specified message
+    DELE <message_number> :     marks a message for deletion
+    QUIT :                      ends the POP3 session applying changes, such as deletions
+
+
+INTERNET MESSAGE ACCESS PROTOCOL
+
+CONNECT : telnet IP 143
+
+    LOGIN <username> <password> :           authenticates the user
+    SELECT <mailbox> :                      selects the mailbox folder to work with
+    FETCH <mail_number> <data_item_name> :  Example fetch 3 body[] to fetch message number 3, header and body.
+    MOVE <sequence_set> <mailbox> :         moves the specified messages to another mailbox
+    COPY <sequence_set> <data_item_name> :  copies the specified messages to another mailbox
+    LOGOUT :                                logs out
