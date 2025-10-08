@@ -1,9 +1,0 @@
-FILE TRANSFER PROTOCOL
-
-CONNECT : ftp IP
-
-    ls : LIST FILES FOLDERS
-    get Filename : DOWNLOAD FILE
-    exit : EXIT FTP
-    type ascii : SWITCH TO ASCII MODE
-

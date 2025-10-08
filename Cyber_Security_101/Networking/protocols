@@ -32,3 +32,14 @@ CONNECT : telnet IP 143
     MOVE <sequence_set> <mailbox> :         moves the specified messages to another mailbox
     COPY <sequence_set> <data_item_name> :  copies the specified messages to another mailbox
     LOGOUT :                                logs out
+
+
+FILE TRANSFER PROTOCOL
+
+CONNECT : ftp IP
+
+    ls : LIST FILES FOLDERS
+    get Filename : DOWNLOAD FILE
+    exit : EXIT FTP
+    type ascii : SWITCH TO ASCII MODE
+
