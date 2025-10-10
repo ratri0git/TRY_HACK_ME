@@ -1,0 +1,14 @@
+GENERATE KEYS : ssh-keygen -t ALGORITHM
+
+    DSA
+    ECDSA
+    ECDSA-SK
+    Ed25519
+    Ed25519-SK
+
+COPY PUBLIC KEY : ssh-copy-id
+
+SET PRIVATE KEY PERMS : chmod 600 Private_Key
+
+LOGIN : ssh -i Private_Key Username@Host
+

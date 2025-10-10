@@ -1,0 +1,6 @@
+GENERATE KEY : gpg --full-gen-key
+
+IMPORT KEY : gpg --import Backup.key
+
+DECRYPT MESSAGE FILE : gpg --decrypt Messagefile.gpg
+
