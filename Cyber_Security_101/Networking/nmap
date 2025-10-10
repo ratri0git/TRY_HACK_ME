@@ -1,0 +1,66 @@
+PING SCAN : -sn
+
+    CHECK IF LIVE IP IN RANGE : nmap -sn 192.168.54.34-115
+
+    CHECK IF LIVE SCAN SUBNETS : nmap -sn 192.168.45.0/24
+
+    CHECK IF LIVE SCAN HOST : nmap -sn Example.com_OR_IP
+
+LIST SCAN TARGETS : nmap -sL 192.169.12.0/24
+
+
+CONNECT SCAN FOR 3 WAY HANDSHAKE COMPLETE : nmap -sT 192.168.0.0/16
+
+SYN STEALTH SCAN FOR PARTIAL HANDSHAKE : nmap -sS 192.168.0.0/16
+
+SCAN FOR UDP SERVICES : nmap -sU 192.168.0.0/16
+
+SCAN COMMON 100 PORTS : nmap -F 192.168.0.0/16
+
+SCAN PORT FROM 1 TO 97 : nmap -p1-97 192.168.0.0/16
+
+SCAN PORT FROM 1 TO 99 : nmap -p-99 192.168.0.0/16
+
+SCAN ALL PORTS : nmap -p- 192.168.0.0/16
+
+
+DETECT OPERATING SYSTEM : nmap -sS -O IP_Addr
+
+DETECT SERVICE VERSION : nmap -sV IP_Addr
+
+DETECT OS, SERVICE VERSON TRACEROUTE AND MORE : nmap -A IP_Addr
+
+SCAN FOR HOSTS APPEAR DOWN : nmap -Pn IP_Addr
+
+
+SCAN TIME TEMPLATE : nmap -T4 OR -T aggressive
+
+    T0 (paranoid)	
+    T1 (sneaky)	
+    T2 (polite)	
+    T3 (normal)	
+    T4 (aggressive)
+    T5 (insane)
+
+    --min-parallelism <numprobes> :	Minimum number of parallel probes
+    --max-parallelism <numprobes> : maximum numbe rof parallel probes
+
+    --min-rate <number> : minum rate
+    --max-rate <number>	: maximum rate (packets/second)
+
+    --host-timeout : Maximum amount of time to wait for a target host
+
+
+VERBOSE : nmap -sS IP_Addr -v { v1 v2 v3 v4 OR v vv vvv vvvv}
+
+DEBUG : nmap -sS IP_Addr -d {d1 to d9 }
+
+
+SAVE SCAN REPORT : nmap -sS IP -oA File0
+
+    -oN <filename> - Normal output
+    -oX <filename> - XML output
+    -oG <filename> - grep-able output (useful for grep and awk)
+    -oA <basename> - Output in all major formats
+
+    
