@@ -1,0 +1,68 @@
+LIST NETWORK INTERFACES : ip a s OR ip addr show
+
+LISTEN ON ALL AVAILABLE INTERFACES : sudo tcpdump -i any
+
+LISTEN ON SPECIFIC INTERFACE : sudo tcpdump -i InterfaceName
+
+CAPTURE AND SAVE PACKETS IN FILE : sudo tcpdump -w FileName.pcap
+
+READ ABOVE FILE : sudo tcpdump -r FileName.pcap
+
+CAPTURE N PACKETS : sudo tcpdump -c N -i InterfaceName
+
+AVOID IP RESOLUTION : sudo tcpdump -i InterfaceName -n
+
+AVOID IP AND PORT NUMBER RESOLUTION : sudo tcpdump -i InterfaceName -nn
+
+GET VERBOSE OUTPUT : sudo tcpdump -i InterfaceName -v
+
+GET MANUAL : man tcpdump
+
+
+CAPTURE ONLY FROM SPECIFIC HOST : 
+    
+    sudo tcpdump host IP -w FileName.pcap
+    sudo tcpdump host HostName -w FileName.pcap
+
+LIMIT PACKETS FROM SOURCE : 
+
+    sudo tcpdump src host IP -w FileName.pcap
+    sudo tcpdump src host HostName -w FileName.pcap
+
+LIMIT PACKETS TO DESTINATION : 
+
+    sudo tcpdump dst host IP -w FileName.pcap
+    sudo tcpdump dst host HostName -w FileName.pcap
+
+CAPTURE FROM SPECIFIC PORT : sudo tcpdump -i InterfaceName port PORT_NUM 
+
+LIMIT FROM SPECIFIC PORT : sudo tcpdump -i InterfaceName src port PORT_NUM 
+
+LIMIT TO SPECIFIC PORT : sudo tcpdump -i InterfaceName dst port PORT_NUM 
+
+FILTER BY PROTOCOL : sudo tcpdump -i InterfaceName icmp OR ip OR ip6 OR udp OR tcp
+
+
+LOGICL OPERATORS : and or not
+
+
+FILTER PACKETS OF GREATER/LESS THAN EQUAL LENGTH : sudo tcpdump -r FileName.pcap less OR greater LEN
+
+CAPTURE TCP ONLY SYNCRONIZE FLAG SET : sudo tcpdump "tcp[tcpflags] == tcp-syn"
+
+    tcp-syn TCP SYN (Synchronize)
+    tcp-ack TCP ACK (Acknowledge)
+    tcp-fin TCP FIN (Finish)
+    tcp-rst TCP RST (Reset)
+    tcp-push TCP Push
+
+CAPTURE ATLEAST SYNCRONIZE FLAG SET : sudo tcpdump "tcp[tcpflags] & tcp-syn != 0"
+
+CAPTURE ATLEAST SYN OR ACK : sudo tcpdump "tcp[tcpflags] & (tcpsyn|tcp-ack) != 0"
+
+
+tcpdump -q	Quick and quite: brief packet information
+tcpdump -e	Include MAC addresses
+tcpdump -A	Print packets as ASCII encoding
+tcpdump -xx	Display packets in hexadecimal format
+tcpdump -X	Show packets in both hexadecimal and ASCII formats
