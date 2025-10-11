@@ -1,0 +1,15 @@
+INSTALL : sudo apt install john
+
+AUTOMATE CRACKING : john --wordlist=/Path/Wordlist /path/Filename
+
+INSTALL HASH IDENTIFIER : wget https://gitlab.com/kalilinux/packages/hash-identifier/-/raw/kali/master/hash-id.py
+
+LAUNCH HASH IDENTIFIER : python3 hash-id.py
+
+FORMAT SPECIFIC CRACKING : john --format=Give_Hash_Format --wordlist=/Path/Wordlist /path/Filename
+
+LIST ALL FORMATS : john --list=formats
+
+GET DESIRED HASH TYPE : john --list=formats | grep -iF "HashType"
+
+
