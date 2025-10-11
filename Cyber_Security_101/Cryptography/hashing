@@ -1,0 +1,13 @@
+CHECK ASCII VALUE AND HEXADECIMAL VALUE : hexdump -C FileName
+
+GENERATE MESSAGE DIGEST ALGORITHM 5 HASH : md5sum FileName
+
+GENERATE SECURE HASH ALGORITHM 1 HASH : sha1sum FileName
+
+GENERATE SECURE HASH ALGORITHM 256 HASH : sha256sum FileName
+
+CRACK HASH PASSWORD : hashcat -m <hash_type> -a <attack_mode> hashFile wordlistFile
+
+ENCODE BASE64 : base64 FileName
+
+DECODE BASE64 : base64 -d FileName
