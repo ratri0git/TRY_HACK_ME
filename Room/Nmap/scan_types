@@ -1,0 +1,20 @@
+TCP CONNECT : nmap -sT IP
+
+CONFIGURE FIREWALL TO RETURN RESET : iptables -I INPUT -p tcp --dport <port> -j REJECT --reject-with tcp-reset
+
+STEALTH SCANS : nmap -sS IP
+
+UDP SCANS : nmap -sU IP
+
+SCAN N MOST COMMON PORTS : nmap -sU --top-ports N IP
+
+
+FOR FIREWALL EVASION : 
+
+    NULL SCANS : nmap -sN IP
+
+    FIN SCANS : nmap -sF IP
+
+    XMAS SCANS : nmap -sX IP
+
+PING SWEEP : nmap -sn IP_Range

@@ -1,0 +1,18 @@
+LAUNCH NMAP : sudo nmap
+
+    TOTAL PORTS : 65535
+    WELL KNOWN : 1024
+
+HELP : nmap -h
+
+MANUAL : man nmap
+
+SYNTAX : nmap [Scan Type(s)] [Options] {target specification}
+
+TREAT TARGETS ALIVE : nmap -Pn IP
+
+    -f : FRAGMENT PACKETS
+    --mtu Number : MAX TRANSMISSION SIZE MULTIPLE OF 8
+    --scan-delay TIME_miliseconds : DELAY BETWEEN PACKETS SENT
+    --badsum : GENERATE INVALID CHEKCUM FOR PACKETS
+    

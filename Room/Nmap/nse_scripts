@@ -1,0 +1,16 @@
+ACTIVE SCRIPT WITH CATEGORY : nmap --script=Category
+
+    safe
+    vuln : vulnerable
+
+RUN SPECIFIC SCRIPT : nmap --script=ScriptName
+
+RUN MULTIPLE SCRIPTS : nmap --script=Script_1,Script_2,Script_N
+
+PROVIDE ARGUMENTS : nmap --script-args Argument_1,Argument_2
+
+GET HELP : nmap --script-help ScriptName
+
+CHECK LOCAL STORED SCRIPTS : /usr/share/nmap/script
+
+CHECK INSTALLED SCRIPTS : /usr/share/nmap/scripts/script.db
