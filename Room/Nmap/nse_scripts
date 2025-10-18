@@ -14,3 +14,5 @@ GET HELP : nmap --script-help ScriptName
 CHECK LOCAL STORED SCRIPTS : /usr/share/nmap/script
 
 CHECK INSTALLED SCRIPTS : /usr/share/nmap/scripts/script.db
+
+RUN DEFUALT SCRIPTS : nmap -sV -sC IP
