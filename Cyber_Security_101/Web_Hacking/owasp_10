@@ -1,0 +1,9 @@
+SQLITE3:
+
+    ACCESS A DATABASE : sqlite3 DatabaseName.db
+
+    SEE TABLES : .tables
+
+    SEE TABLE INFO : PRAGMA table_info(TableName);
+
+    SEE ALL TABLE DATA : select * from TableName;
