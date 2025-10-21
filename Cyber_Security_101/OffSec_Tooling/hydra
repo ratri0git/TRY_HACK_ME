@@ -1,0 +1,31 @@
+PROTOCOLS : Asterisk, AFP, Cisco AAA, Cisco auth, Cisco enable, CVS, Firebird, FTP, HTTP-FORM-GET, 
+            HTTP-FORM-POST, HTTP-GET, HTTP-HEAD, HTTP-POST, HTTP-PROXY, HTTPS-FORM-GET, HTTPS-FORM-POST, HTTPS-GET, HTTPS-HEAD, HTTPS-POST, HTTP-Proxy, ICQ, IMAP, IRC, LDAP, MEMCACHED, MONGODB, MS-SQL, MYSQL, NCP, NNTP, Oracle Listener, Oracle SID, Oracle, PC-Anywhere, PCNFS, POP3, POSTGRES, Radmin, RDP, Rexec, Rlogin, Rsh, RTSP, SAP/R3, SIP, SMB, SMTP, SMTP Enum, SNMP v1+v2+v3, SOCKS5, SSH (v1 and v2), SSHKEY, Subversion, TeamSpeak (TS2), Telnet, VMware-Auth, VNC, XMPP
+
+        
+OPTIONS AND DESCRIPTION :
+
+    -l : username for login
+    -P : list of passwords
+    -t : number of threads to spawn
+
+FTP : hydra -l UserName -P /Path/PasswordList ftp://Target_IP
+
+SSH : hydra -l UserName -P /Path/PasswordList Target_IP -t NUM ssh
+
+
+
+OPTIONS AND DESCRIPTION :
+
+    -l :                    username for login
+    -P :                    list of passwords
+    http-post-form :        type of the form  POST 
+    http-get :              type of form GET
+    <path> :                the login page URL
+    <login_credentials>	:   the username and password used to log in : username=^USER^&password=^PASS^
+    <invalid_response>	:   part of the response when the login fails
+    -V	:                   verbose output for every attempt
+
+sudo hydra <username> <wordlist> Target_IP http-post-form "<path>:<login_credentials>:<invalid_response>"
+
+EXAMPLE : hydra -l <username> -P <wordlist> Target_IP http-post-form "/:username=^USER^&                password=^PASS^:F=incorrect" -V
+

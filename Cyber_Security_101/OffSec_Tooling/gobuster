@@ -1,0 +1,22 @@
+CONFIGURE DNS FILE : 
+
+    OPEN TO EDIT : sudo nano /etc/resolv-dnsmasq
+
+    ADD LINE : nameserver Target_IP
+
+    RESTART  DNSMASQ SERVICE : /etc/init.d/dnsmasq restart
+
+
+HELP PAGE : gobuster --help
+
+HELP FOR DIRECTORY FILE ENUMERATION : gobuster dir --help
+
+    gobuster dir -u "http://www.example.thm" -w /path/to/wordlist
+
+HELP FOR SUBDOMAIN ENUMERATION : gobuster dns --help
+
+    gobuster dns -d example.thm -w /path/to/wordlist
+
+HELP FOR VIRTUAL HOSTS : gobuster vhost --help
+
+    gobuster vhost -u "http://example.thm" -w /path/to/wordlist
