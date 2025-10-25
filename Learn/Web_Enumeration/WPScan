@@ -1,0 +1,14 @@
+UPDATE WPSCAN DATABASE : wpscan --update
+
+ENUMERATE INSTALLED THEMES : wpscan --url Web_URL --enumerate t
+
+ENUMERATE INSTALLED PLUGINS : wpscan --url Web_URL --enumerate p
+
+ENUMERATE USERS : wpscan --url Web_URL --enumerate u
+
+CHECK FOR VULNERABILITIES IN PLUGINS : wpscan --url Web_URL --enumerate vp 
+
+PASSWORD ATTACK : wpscan --url Web_URL --passwords /Path/PassListName --usernames UserName
+
+AGGRESSION FLAG : --plugin-detection aggressive OR passive
+

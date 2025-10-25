@@ -1,0 +1,35 @@
+USEFUL FLAGS : 
+
+    -t	OR --threads       : Number of concurrent threads (default 10)
+    -v	OR --verbos        : Verbose output
+    -z	OR --no-progress   : Don't display progress
+    -q	OR --quiet         : Don't print the banner and other noise
+    -o	OR --output	       : Output file to write results to
+
+
+ENUMERTAE WEBSITE DIRECTORIES : 
+
+    HELP : gobuster dir --help
+
+    SYNTAX : gobuster dir -u Site_URL -w /Path/To/Wordlist -x .html,.js
+
+
+BRUTE FORCE SUBDOMAINS : 
+
+    HELP : gobuster dns --help
+
+    SYNTAX : gobuster dns -d DomainName -w /Path/To/Wordlist
+
+
+BRUTE FORCE VIRTUAL HOSTS : 
+
+    HELP : gobuster vhost --help
+
+    SYNTAX : gobuster vhost -u Site_URL -w /Path/To/Wordlist 
+
+
+KALI LINUX WORDLISTS : /usr/share/worlists
+SECLISTS : https://github.com/danielmiessler/SecLists
+
+DOWNLOAD FILE : wget URL/Folder/FileName
+    

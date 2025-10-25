@@ -1,0 +1,30 @@
+BASIC SCAN : nikto -h Vulnerable_IP
+
+SCAN MULTIPLE PORTS : nikto -h Vulnerable_IP -p Port!,Port2
+
+SCAN MULTIPLE IP : nmap -p PortNUM IP_range -oG - | nikto -h -
+
+LIST PLUGINS : nikto --list-plugins
+
+USE PLUGINS : nikto -h Vulnerable_IP -plugin Plugin_Name
+
+VERBOSE : -Display NUM
+    
+    NUM = 1 OR 2 OR 3
+
+TUNING : -Tuning NUM
+
+    FILE UPLOAD : 0
+    DEFAULT FILE OR MISCONFIGURATION : 2
+    INFO DISCLOSURE : 3
+    INJECTION : 4
+    COMMAND EXECUTION : 8
+    SQL INJECTION : 9
+
+OUTPUT : -o FileName.html
+
+
+
+
+
+
